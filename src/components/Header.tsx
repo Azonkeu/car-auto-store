@@ -20,7 +20,7 @@ const Header = () => {
     <header className="header">
       <div className={styles.contact}>
         <Link href="/">
-          <a className={styles.zone}>
+          <p className={styles.zone}>
             Offer Zone Top Deals & Discounts
             <FontAwesomeIcon
               icon={faCartShopping}
@@ -31,10 +31,10 @@ const Header = () => {
                 marginLeft: "2%",
               }}
             />
-          </a>
+          </p>
         </Link>
         <Link href="/">
-          <a className={styles.link}>
+          <p className={styles.link}>
             <FontAwesomeIcon
               icon={faLocationPin}
               style={{
@@ -45,10 +45,10 @@ const Header = () => {
               }}
             />
             Select Location
-          </a>
+          </p>
         </Link>
         <Link href="/">
-          <a className={styles.link}>
+          <p className={styles.link}>
             <FontAwesomeIcon
               icon={faTruck}
               style={{
@@ -59,10 +59,10 @@ const Header = () => {
               }}
             />
             Track Order
-          </a>
+          </p>
         </Link>
         <Link href="/">
-          <a className={styles.link}>
+          <p className={styles.link}>
             <FontAwesomeIcon
               icon={faPhoneFlip}
               style={{
@@ -73,10 +73,10 @@ const Header = () => {
               }}
             />
             001 234 5678
-          </a>
+          </p>
         </Link>
         <Link href="/">
-          <a className={styles.li}>
+          <p className={styles.li}>
             <FontAwesomeIcon
               icon={faRightToBracket}
               style={{
@@ -87,7 +87,7 @@ const Header = () => {
               }}
             />
             Log In
-          </a>
+          </p>
         </Link>
         <Link href="/">
           <a className={styles.lin}>
@@ -136,10 +136,11 @@ const Header = () => {
       <nav className={styles.nav}>
         <div className={styles.navdiv}>
           <div className={styles.cat}>
-            <a href="" className={styles.tex}>
-              {" "}
+            <Link href="/">
+            <p className={styles.tex}>
               All Categories
-            </a>
+            </p>
+            </Link>
             <span className={styles.btn}>
               <FontAwesomeIcon
                 icon={faCaretDown}
@@ -151,33 +152,41 @@ const Header = () => {
             </span>
           </div>
           <Link href="/">
-            <a
+            <p
               className={asPath === "/" ? `${styles.active}` : `${styles.nal}`}
             >
               home
-            </a>
+            </p>
           </Link>
           <Link href="/cars">
-            <a
+            <p
               className={
                 asPath === "/cars" ? `${styles.active}` : `${styles.nal}`
               }
             >
               Cars
-            </a>
+            </p>
           </Link>
-          <a href="/" className={styles.about}>
+          <Link href="/">
+          <p className={styles.about}>
             About Us
-          </a>
-          <a href="/" className={styles.nax}>
+          </p>
+          </Link>
+          <Link href="/">
+          <p className={styles.nax}>
             New Arrivals
-          </a>
-          <a href="/" className={styles.nal}>
+          </p>
+          </Link>
+          <Link href="/">
+          <p className={styles.nal}>
             Pages
-          </a>
-          <a href="/" className={styles.con}>
+          </p>
+          </Link>
+          <Link href="/">
+          <p className={styles.con}>
             Contact Us
-          </a>
+          </p>
+          </Link>
         </div>
       </nav>
     </header>
