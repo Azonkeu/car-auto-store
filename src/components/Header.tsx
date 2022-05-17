@@ -10,7 +10,6 @@ import {
   faCartShopping,
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
 import styles from "../../styles/header.module.css";
 import { useRouter } from "next/router";
 
@@ -106,7 +105,7 @@ const Header = () => {
       </div>
       <div className={styles.log}>
         <div className={styles.store}>
-          <Image src="/log.png" alt="logo" width="100%" height="2.5rem" />
+          <img src="/log.png" alt="logo" />
           <h2 className={styles.tit}>Auto Store</h2>
         </div>
         <form className={styles.form}>
