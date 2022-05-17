@@ -44,7 +44,7 @@ const Item: React.FC = () => {
       .then((response: AxiosResponse) => {
         setInfo(response.data);
       });
-  }, []);
+  }, [asPath]);
 
   return (
     <div>

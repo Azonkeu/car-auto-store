@@ -19,15 +19,6 @@ interface Obj {
 const Item: React.FC = () => {
   const [cars, setCars] = useState<Obj>();
   const { asPath } = useRouter();
-
-  useEffect(() => {
-    axios
-      .get(`https://api-prod.autochek.africa/v1/inventory/${newstr}`)
-      .then((response: AxiosResponse) => {
-        setCars(response.data);
-      });
-  }, []);
-
   const vet = asPath.split("");
   vet.splice(0, 10);
   const ret = vet.join("");
@@ -38,6 +29,13 @@ const Item: React.FC = () => {
   const ind = ret.split("");
   ind.splice(0, 1);
   const id = ind.join("");
+  useEffect(() => {
+    axios
+      .get(`https://api-prod.autochek.africa/v1/inventory/${newstr}`)
+      .then((response: AxiosResponse) => {
+        setCars(response.data);
+      });
+  }, [newstr]);
 
   return (
     <div>

@@ -10,6 +10,7 @@ import {
   faCartShopping,
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 import styles from "../../styles/header.module.css";
 import { useRouter } from "next/router";
 
@@ -18,82 +19,94 @@ const Header = () => {
   return (
     <header className="header">
       <div className={styles.contact}>
-        <a href="" className={styles.zone}>
-          Offer Zone Top Deals & Discounts
-          <FontAwesomeIcon
-            icon={faCartShopping}
-            style={{
-              width: "3%",
-              height: "2rem",
-              color: "white",
-              marginLeft: "2%",
-            }}
-          />
-        </a>
-        <a href="" className={styles.link}>
-          <FontAwesomeIcon
-            icon={faLocationPin}
-            style={{
-              width: "7%",
-              height: "2rem",
-              color: "white",
-              marginRight: "2.5%",
-            }}
-          />
-          Select Location
-        </a>
-        <a href="" className={styles.link}>
-          <FontAwesomeIcon
-            icon={faTruck}
-            style={{
-              width: "11%",
-              height: "2rem",
-              color: "white",
-              marginRight: "2.5%",
-            }}
-          />
-          Track Order
-        </a>
-        <a href="" className={styles.link}>
-          <FontAwesomeIcon
-            icon={faPhoneFlip}
-            style={{
-              width: "9%",
-              height: "2rem",
-              color: "white",
-              marginRight: "2.5%",
-            }}
-          />
-          001 234 5678
-        </a>
-        <a href="/detail" className={styles.li}>
-          <FontAwesomeIcon
-            icon={faRightToBracket}
-            style={{
-              width: "15%",
-              height: "2rem",
-              color: "white",
-              marginRight: "2.5%",
-            }}
-          />
-          Log In
-        </a>
-        <a href="" className={styles.lin}>
-          <FontAwesomeIcon
-            icon={faRightFromBracket}
-            style={{
-              width: "14%",
-              height: "2rem",
-              color: "white",
-              marginRight: "2.5%",
-            }}
-          />
-          Register
-        </a>
+        <Link href="/">
+          <a className={styles.zone}>
+            Offer Zone Top Deals & Discounts
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              style={{
+                width: "3%",
+                height: "2rem",
+                color: "white",
+                marginLeft: "2%",
+              }}
+            />
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.link}>
+            <FontAwesomeIcon
+              icon={faLocationPin}
+              style={{
+                width: "7%",
+                height: "2rem",
+                color: "white",
+                marginRight: "2.5%",
+              }}
+            />
+            Select Location
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.link}>
+            <FontAwesomeIcon
+              icon={faTruck}
+              style={{
+                width: "11%",
+                height: "2rem",
+                color: "white",
+                marginRight: "2.5%",
+              }}
+            />
+            Track Order
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.link}>
+            <FontAwesomeIcon
+              icon={faPhoneFlip}
+              style={{
+                width: "9%",
+                height: "2rem",
+                color: "white",
+                marginRight: "2.5%",
+              }}
+            />
+            001 234 5678
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.li}>
+            <FontAwesomeIcon
+              icon={faRightToBracket}
+              style={{
+                width: "15%",
+                height: "2rem",
+                color: "white",
+                marginRight: "2.5%",
+              }}
+            />
+            Log In
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.lin}>
+            <FontAwesomeIcon
+              icon={faRightFromBracket}
+              style={{
+                width: "14%",
+                height: "2rem",
+                color: "white",
+                marginRight: "2.5%",
+              }}
+            />
+            Register
+          </a>
+        </Link>
       </div>
       <div className={styles.log}>
         <div className={styles.store}>
-          <img src="/log.png" alt="logo" />
+          <Image src="/log.png" alt="logo" width="100%" height="2.5rem" />
           <h2 className={styles.tit}>Auto Store</h2>
         </div>
         <form className={styles.form}>

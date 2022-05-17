@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import styles from "../../styles/detail.module.css";
 
 interface Makes {
@@ -49,6 +50,7 @@ const Detail: React.FC<Pronx> = ({
   id,
 }) => {
   const router = useRouter();
+  console.log(`${imageUrl}`)
   return (
     <div className={styles.detai}>
       <p className={styles.url}>
@@ -70,8 +72,8 @@ const Detail: React.FC<Pronx> = ({
               View car media
             </button>
           </div>
-          <img src={imageUrl} alt="car image" className={styles.img} />
-        </div>
+            <Image src={`${imageUrl}`} width="100%" height="20rem" alt="car image" className={styles.img} />
+        </div> 
         <div className={styles.det}>
           <div className={styles.deone}>
           <p>

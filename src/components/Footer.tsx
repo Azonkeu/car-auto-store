@@ -1,46 +1,63 @@
 import React from "react";
 import styles from "../../styles/footer.module.css";
+import Image from "next/image";
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <a href="/" className={styles.aut}>
-        © 2022 Automarket Nigeria Ltd. All rights reserved.
-      </a>
-      <a href="/" className={styles.careers}>
-        Careers
-      </a>
-      <a href="/" className={styles.terms}>
-        Terms of Use
-      </a>
-      <a href="/" className={styles.terms}>
-        Privacy Policy
-      </a>
-      <a href="/" className={styles.terms}>
-        Cookie Policy
-      </a>
+      <Link href="/">
+        <a className={styles.aut}>
+          © 2022 Automarket Nigeria Ltd. All rights reserved.
+        </a>
+      </Link>
+      <Link href="/">
+        <a className={styles.careers}>Careers</a>
+      </Link>
+      <Link href="/">
+        <a className={styles.terms}>Terms of Use</a>
+      </Link>
+      <Link href="/">
+        <a className={styles.terms}>Privacy Policy</a>
+      </Link>
+      <Link href="/">
+        <a className={styles.terms}>Cookie Policy</a>
+      </Link>
       <span className={styles.spa}></span>
       <div className={styles.icon}>
-        <a href="/" className={styles.img}>
-          <img
-            src="/facebook-bran.svg"
-            alt="facebook icon"
-            className={styles.image}
-          />
-        </a>
-        <a href="/" className={styles.img}>
-          <img
-            src="/instagram-square-brands.svg"
-            alt="Instagram icon"
-            className={styles.image}
-          />
-        </a>
-        <a href="/" className={styles.img}>
-          <img
-            src="/twitter-brands.svg"
-            alt="Twitter icon"
-            className={styles.image}
-          />
-        </a>
+        <Link href="/">
+          <a className={styles.img}>
+            <Image
+              src="/facebook-bran.svg"
+              alt="facebook icon"
+              className={styles.image}
+              width="23%"
+              height="25rem"
+            />
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.img}>
+            <Image
+              src="/instagram-square-brands.svg"
+              alt="Instagram icon"
+              className={styles.image}
+              width="23%"
+              height="25rem"
+            />
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.img}>
+            <Image
+              src="/twitter-brands.svg"
+              alt="Twitter icon"
+              width="23%"
+              height="25rem"
+              className={styles.image}
+            />
+          </a>
+        </Link>
       </div>
     </div>
   );
