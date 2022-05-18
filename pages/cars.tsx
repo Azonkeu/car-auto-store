@@ -36,7 +36,7 @@ const Car: React.FC<Props> = ({ data }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context: unknown) {
   const res = await fetch(
     "https://api-prod.autochek.africa/v1/inventory/car/search"
   );

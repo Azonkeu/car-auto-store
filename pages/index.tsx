@@ -42,7 +42,7 @@ const Home: React.FC<Props> = ({ cars }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context: unknown) {
   const res = await fetch(
     "https://api.staging.myautochek.com/v1/inventory/make?popular=true"
   );
