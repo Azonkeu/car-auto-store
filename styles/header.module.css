@@ -186,6 +186,7 @@
     flex-direction: row;
     justify-content: flex-end;
     padding: 0.6% 1% 0.6% 1%;
+    height: 2.4rem;
   }
 
   .zone {
